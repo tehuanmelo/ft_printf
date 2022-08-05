@@ -1,4 +1,4 @@
-<h1 align="center">ft_printf<\h1>
+<h1 align="center">ft_printf</h1>
 
 <p align="center">
 	<b><i>Second project from 42 School, my own version of printf function.</i></b><br>
