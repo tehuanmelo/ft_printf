@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_base.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tehuanmelo <tehuanmelo@student.42.fr>      +#+  +:+       +#+        */
+/*   By: tde-melo <tde-melo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/04 17:23:30 by tehuanmelo        #+#    #+#             */
-/*   Updated: 2022/08/05 09:35:40 by tehuanmelo       ###   ########.fr       */
+/*   Created: 2022/07/26 13:21:02 by tde-melo          #+#    #+#             */
+/*   Updated: 2022/08/05 14:27:16 by tde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "../libft/libft.h"
 
-void ft_base(unsigned int n, unsigned int base)
+int	ft_putnbr(long long n)
 {
-    char *str = "0123456789abcdef";
-    
-    if (n >= base)
-    {
-        ft_base(n / base, base);
-        ft_base(n % base, base);
-    }
-    else
-        ft_putchar(str[n]);
+	int count;
+
+	count = 0;
+	if (n > 9)
+	{
+		count += ft_putnbr(n / 10);
+		count += ft_putnbr(n % 10);
+	}
+	else if (n < 0)
+	{
+		count += ft_putchar('-');
+		count += ft_putnbr(-n);
+	}
+	else
+		count += ft_putchar(n + 48);
+	return (count);
 }
