@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-melo <tde-melo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tehuanmelo <tehuanmelo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 12:55:34 by tde-melo          #+#    #+#             */
-/*   Updated: 2022/08/05 17:01:43 by tde-melo         ###   ########.fr       */
+/*   Created: 2022/08/05 22:53:02 by tehuanmelo        #+#    #+#             */
+/*   Updated: 2022/08/05 23:12:08 by tehuanmelo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *s)
+int	ft_putstr(char *str)
 {
 	int counter;
 
 	counter = 0;
-	if (!s)
-		return ft_putstr("(null)");
-	while (*s)
-		counter += ft_putchar(*s++);
+	if (!str)
+		return (ft_putstr("(null)"));
+	while (*str)
+		counter += ft_putchar(*str++);
 	return (counter);
 }

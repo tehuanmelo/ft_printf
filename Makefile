@@ -1,19 +1,18 @@
 NAME = libftprintf.a
-SRC = $(wildcard ./*.c)
+SRC = $(wildcard ./*c)
 OBJ = $(SRC:.c=.o)
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Wextra -Werror
 
-all:	$(NAME) 
+$(NAME): $(OBJ)
+		ar r $(NAME) $(OBJ)
 
-$(NAME):	$(OBJ)
-	ar rcs $(NAME) $(OBJ)
+all: $(NAME)
 
 clean:
-	rm -f *.o *.out
+		rm -f *.out *.o
 
-fclean:	clean
-	rm -f *.all
+fclean: clean	
+		rm -f *.a
 
-re:	fclean all
-
+re: fclean all

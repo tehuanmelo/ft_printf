@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-melo <tde-melo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tehuanmelo <tehuanmelo@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 13:21:02 by tde-melo          #+#    #+#             */
-/*   Updated: 2022/08/05 14:27:16 by tde-melo         ###   ########.fr       */
+/*   Created: 2022/08/05 23:13:37 by tehuanmelo        #+#    #+#             */
+/*   Updated: 2022/08/05 23:37:55 by tehuanmelo       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(long long n)
+int	ft_putnbr(long n)
 {
-	int count;
+	int counter;
 
-	count = 0;
+	counter = 0;
 	if (n > 9)
 	{
-		count += ft_putnbr(n / 10);
-		count += ft_putnbr(n % 10);
+		counter += ft_putnbr(n / 10);
+		counter += ft_putnbr(n % 10);
 	}
 	else if (n < 0)
 	{
-		count += ft_putchar('-');
-		count += ft_putnbr(-n);
+		counter += ft_putchar('-');
+		counter += ft_putnbr(n *= -1);
 	}
 	else
-		count += ft_putchar(n + 48);
-	return (count);
+		counter += ft_putchar(n + 48);
+	return (counter);
 }
