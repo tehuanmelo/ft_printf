@@ -13,5 +13,6 @@ int ft_putnbr(long n);
 int ft_putlox(unsigned long n);
 int ft_putupx(unsigned long n);
 int ft_putptr(unsigned long n);
+int	ft_puthex(unsigned long n, char x);
 
 #endif
