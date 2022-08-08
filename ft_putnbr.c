@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tehuanmelo <tehuanmelo@student.42.fr>      +#+  +:+       +#+        */
+/*   By: tde-melo <tde-melo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 23:13:37 by tehuanmelo        #+#    #+#             */
-/*   Updated: 2022/08/05 23:37:55 by tehuanmelo       ###   ########.fr       */
+/*   Updated: 2022/08/08 12:09:30 by tde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putnbr(long n)
 {
-	int counter;
+	int	counter;
 
 	counter = 0;
 	if (n > 9)
@@ -25,7 +25,7 @@ int	ft_putnbr(long n)
 	else if (n < 0)
 	{
 		counter += ft_putchar('-');
-		counter += ft_putnbr(n *= -1);
+		counter += ft_putnbr(-n);
 	}
 	else
 		counter += ft_putchar(n + 48);
