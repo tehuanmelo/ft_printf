@@ -36,3 +36,11 @@
             function that will mimic the original printf()</td>
     </tr>
 </table>
+
+<h2>Usage</h2>
+<ol>
+    <li><p>Clone the folder and run make to generate the library libftprintf.a </p></li>
+    <code>$ make</code>
+    <li><p>Include it's headerfile on your project ft_printf.h </p></li>
+    <code>#include "ft_printf.h"</code>
+</ol>
