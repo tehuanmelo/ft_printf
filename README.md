@@ -1,13 +1,39 @@
 <h1 align="center">ft_printf</h1>
+<h3 align="center">Because ft_putnbr() and ft_putstr() aren’t enough</h3>
+<hr>
+<p align="center">Summary:<br>
+    The goal of this project is pretty straightforward. You will recode printf().
+    You will mainly learn about using a variable number of arguments. How cool is that??
+    It is actually pretty cool :)
+    Version: 9.2</p>
 
-<p align="center">
-	<b><i>Second project from 42 School, my own version of printf function.</i></b><br>
-</p>
+<h2>Mandatory Part</h2>
 
-## About the project
-
-	The goal of this project is pretty straightforward. You will recode printf().
-You will mainly learn about using a variable number of arguments. How cool is that??
-It is actually pretty cool :)
-
--- in progress ...
+<table>
+    <tr >
+        <td>Program name</td>
+        <td>libftprintf.a</td>
+    </tr>
+    <tr>
+        <td>Turn in files</td>
+        <td>Makefile, *.h, */*.h, *.c, */*.c</td>
+    </tr>
+    <tr>
+        <td>Makefile</td>
+        <td>NAME, all, clean, fclean, re</td>
+    </tr>
+    <tr>
+        <td>External functs.</td>
+        <td>malloc, free, write,
+            va_start, va_arg, va_copy, va_end</td>
+    </tr>
+    <tr>
+        <td>Libft authorized </td>
+        <td>Yes</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>Write a library that contains ft_printf(), a
+            function that will mimic the original printf()</td>
+    </tr>
+</table>
