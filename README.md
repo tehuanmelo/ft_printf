@@ -1,46 +1,46 @@
-<h1 align="center">ft_printf</h1>
-<h3 align="center">Because ft_putnbr() and ft_putstr() aren’t enough</h3>
-<p align="center">Summary:<br>
-    The goal of this project is pretty straightforward. You will recode printf().
-    You will mainly learn about using a variable number of arguments. How cool is that??
-    It is actually pretty cool :)
-    Version: 9.2</p>
+## ft_printf
+A custom implementation of the printf function from the C Standard Library.
 
-<h2>Mandatory Part</h2>
+## Table of Contents
 
-<table>
-    <tr >
-        <td>Program name</td>
-        <td>libftprintf.a</td>
-    </tr>
-    <tr>
-        <td>Turn in files</td>
-        <td>Makefile, *.h, */*.h, *.c, */*.c</td>
-    </tr>
-    <tr>
-        <td>Makefile</td>
-        <td>NAME, all, clean, fclean, re</td>
-    </tr>
-    <tr>
-        <td>External functs.</td>
-        <td>malloc, free, write,
-            va_start, va_arg, va_copy, va_end</td>
-    </tr>
-    <tr>
-        <td>Libft authorized </td>
-        <td>Yes</td>
-    </tr>
-    <tr>
-        <td>Description</td>
-        <td>Write a library that contains ft_printf(), a
-            function that will mimic the original printf()</td>
-    </tr>
-</table>
+- [Introduction](#introduction)
+- [Compilation](#compilation)
+- [Usage](#usage)
+- [Supported Conversions](#supported conversions)
+- [Contribution](#contribution)
+- [Author](#author)
 
-<h2>Usage</h2>
-<ol>
-    <li><p>Clone the folder and run make to generate the library libftprintf.a </p></li>
-    <code>$ make</code>
-    <li><p>Include it's headerfile on your project ft_printf.h </p></li>
-    <code>#include "ft_printf.h"</code>
-</ol>
+## Introduction
+ft_printf is a project from the 42 curriculum that involves recreating the printf function, a standard function in the C library for formatted output. The function should support a wide range of conversion specifiers and formatting options, while also being efficient and easy to use.
+
+## Compilation
+
+To compile ft_printf, clone the repository and run make in the root directory. This will create the libftprintf.a library, which can be linked to your project.
+
+## Usage
+ft_printf is used in the same way as the standard printf function, with the same syntax for format specifiers and arguments. For example:
+
+````
+#include "ft_printf.h"
+
+int main(void)
+{
+    ft_printf("Hello, %s!\n", "world");
+    return 0;
+}
+````
+
+## Supported Conversions
+
+ft_printf supports the following conversion specifiers:
+
+- c: character
+- s: string
+- p: pointer address
+- d or i: signed decimal integer
+- u: unsigned decimal integer
+- x: unsigned hexadecimal integer (lowercase)
+- X: unsigned hexadecimal integer (uppercase)
+
+Author
+ft_printf was created by [@tehuanmelo].
