@@ -38,6 +38,7 @@
 
 # Debug files
 *.dSYM/
+*.swp
 *.su
 *.idb
 *.pdb
@@ -50,6 +51,8 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#other files
 printfTester/
 .vscode/
 ft_printf_tester/
