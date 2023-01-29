@@ -1,18 +1,36 @@
 NAME = libftprintf.a
-SRC = $(wildcard ./*c)
-OBJ = $(SRC:.c=.o)
+SRCFILES =\
+ft_printf.c\
+ft_putchar.c\
+ft_puthex.c\
+ft_putnbr.c\
+ft_putstr.c
+vpath %.c src
+OBJPATH = obj/
+SRCPATH = src/
+SRC = $(addprefix $(SRCPATH), $(SRCFILES))
+OBJ = $(patsubst $(SRCPATH)%.c, $(OBJPATH)%.o, $(SRC))
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Werror -Wextra
 
-$(NAME): $(OBJ)
-		ar r $(NAME) $(OBJ)
+.SILENT:
 
-all: $(NAME)
+all:	$(OBJPATH) $(NAME)
+
+$(OBJPATH):
+	mkdir $(OBJPATH)
+
+$(NAME):	$(OBJ)
+	ar r $(NAME) $(OBJ)
+	echo "Compilation done successfully!"
+
+$(OBJPATH)%.o:	%.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-		rm -f *.out *.o
+	rm -rf $(OBJPATH)
 
-fclean: clean	
-		rm -f *.a
+fclean:	clean
+	rm -f $(NAME)
 
-re: fclean all
+re:		fclean all
