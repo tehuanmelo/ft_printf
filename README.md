@@ -7,7 +7,6 @@ A custom implementation of the printf function from the C Standard Library.
 - [Compilation](#compilation)
 - [Usage](#usage)
 - [Supported Conversions](#supported-conversions)
-- [Contribution](#contribution)
 - [Author](#author)
 - [Contact](#contact)
 
