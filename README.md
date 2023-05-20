@@ -20,7 +20,7 @@ To use the ft_printf in your own project, you will need to include the `"libftpr
 for example:
 
 ````
-gcc -o main main.c -L. -lftprintf
+gcc -o main.c -L. -lftprintf
 ````
 You can also use the ft_printf in other projects by copying the `"libftprintf.a"` file to the project's directory and linking it using the `"-lft"` flag.
 
